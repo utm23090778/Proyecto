@@ -39,12 +39,24 @@ function App() {
          
           <Form>
             <Form.Group>
+            <Row>
             <Form.Label> El siguiente cuestionario puede ser respondido con las siguientes respuestas.</Form.Label>
+            </Row>
+            <Row>
             <Form.Label> A.- Siempre</Form.Label>
+            </Row>
+            <Row>
             <Form.Label> B.- A veces</Form.Label>
+            </Row>
+            <Row>
             <Form.Label> C.- Rara vez</Form.Label>
+            </Row>
+            <Row>
             <Form.Label> D.- Nunca</Form.Label>
+            </Row>
+            <Row>
             <Form.Label> Marca tu respuesta ingresando la letra correspondiente entre A,B,C y D.</Form.Label>
+            </Row>
             </Form.Group>
           </Form>
         </Card.Body>

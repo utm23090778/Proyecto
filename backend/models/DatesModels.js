@@ -83,4 +83,4 @@ const DatasSchema = new Schema({
     },
 })
 
-export const DatesModel = model("dates",DatasSchema)
+export const DatesModel = model("anwers",DatasSchema)

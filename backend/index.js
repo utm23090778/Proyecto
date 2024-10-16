@@ -2,7 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import {DatesModel} from "./models/DatesModels.js";
 
-mongoose.connect("mongodb://localhost:27017/citas").then(()=>{
+
+mongoose.connect("mongodb://localhost:27017/Evaluacion-Docente").then(()=>{
     console.log("conexion exitosa a la base de datos")
 })
 
