@@ -1,7 +1,9 @@
-import logo from './logo.svg';
-import { Card, Container, Form, Row,Col,Button } from 'react-bootstrap';
+
+import { Card, Container, Form, Row,Button } from 'react-bootstrap';
 import './App.css';
 import { useState } from 'react';
+import axios from 'axios';
+import Swal from'sweetalert2';
 
 
 function App() {
@@ -28,7 +30,21 @@ function App() {
       setisEnable(false)
     }
   }
-  return (
+
+    const onSubmit = async ()=>{
+      try {
+        Swal.fire('Enviando los datos...');
+        Swal.showLoading();
+        await axios.post('http://localhost:4000/create', encuesta);
+        Swal.fire('¡Datos registrados exitosamente!','','success')
+      } catch (error) {
+        console.log(error);
+        Swal.fire('¡Error al registrar los datos!','', 'error')
+      }
+    }  
+
+
+return (
     <Container>
 
 <Card>
@@ -155,9 +171,8 @@ function App() {
             <Form.Control onChange={onChange} name="pregunta20" placeholder='ingresa un valor entre A,B,C,D'/>
             </Form.Group>
 
-            <Button disabled={isEnable}>Enviar!</Button>
+            <Button onClick={() => {onSubmit()}} disabled= {isEnable} variant="outline-success">Enviar</Button>
             
-
           </Form>
         </Card.Body>
       </Card>
@@ -166,7 +181,7 @@ function App() {
 
     
   );
-}
+};
 
 export default App;
 
