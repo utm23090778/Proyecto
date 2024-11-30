@@ -1,86 +1,87 @@
 import {Schema, model} from "mongoose";
 
-const DatasSchema = new Schema({
-    respuesta_pregunta1:{
+const AnswerSchema = new Schema({
+    pregunta_0:{
         type: String,
         require: true
     },
-    respuesta_pregunta2:{
+    pregunta_1:{
         type: String,
         require: true
     },
-    respuesta_pregunta3:{
+    pregunta_2:{
         type: String,
         require: true
     },
-    respuesta_pregunta4:{
+    pregunta_3:{
         type: String,
         require: true
     },
-    respuesta_pregunta5:{
+    pregunta_4:{
         type: String,
         require: true
     },
-    respuesta_pregunta6:{
+    pregunta_5:{
         type: String,
         require: true
     },
-    respuesta_pregunta7:{
+    pregunta_6:{
         type: String,
         require: true
     },
-    respuesta_pregunta8:{
+    pregunta_7:{
         type: String,
         require: true
     },
-    respuesta_pregunta9:{
+    pregunta_8:{
         type: String,
         require: true
     },
-    respuesta_pregunta10:{
+    pregunta_9:{
         type: String,
         require: true
     },
-    respuesta_pregunta11:{
+    pregunta_10:{
         type: String,
         require: true
     },
-    respuesta_pregunta12:{
+    pregunta_11:{
         type: String,
         require: true
     },
-    respuesta_pregunta13:{
+    pregunta_12:{
         type: String,
         require: true
     },
-    respuesta_pregunta14:{
+    pregunta_13:{
         type: String,
         require: true
     },
-    respuesta_pregunta15:{
+    pregunta_14:{
         type: String,
         require: true
     },
-    respuesta_pregunta16:{
+    pregunta_15:{
         type: String,
         require: true
     },
-    respuesta_pregunta17:{
+    pregunta_16:{
         type: String,
         require: true
     },
-    respuesta_pregunta18:{
+    pregunta_17:{
         type: String,
         require: true
     },
-    respuesta_pregunta19:{
+    pregunta_18:{
         type: String,
         require: true
     },
-    respuesta_pregunta20:{
+    pregunta_19:{
         type: String,
         require: true
     },
+    
 })
 
-export const DatesModel = model("anwers",DatasSchema)
+export const AnswerModel = model("anwers",AnswerSchema)
